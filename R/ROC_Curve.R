@@ -14,32 +14,12 @@ auc
 rocobj <- roc(dataForThreshold$class, dataForThreshold$expr)
 rocobj
 
-sensitivities <- coords(rocobj, rocobj$thresholds, "thr", "se", transpose = FALSE)
-sensitivities
+plot.roc(rocobj, legacy.axes = TRUE)
+plot.roc(rocobj, legacy.axes = FALSE)
 
+TPR=sort(rocobj$sensitivities, decreasing = F)
+FPR=1-sort(rocobj$specificities, decreasing = T)
 
-plot(rocobj)
-
-rocobj$specificities
-rocobj$sensitivities
-
-
-
-TPR=rocobj$sensitivities
-FPR=rocobj$specificities
-
-
-pred <- prediction(dataForThreshold$expr,dataForThreshold$class)
-perf <- performance(pred, measure = "tpr", x.measure = "fpr")
-perf
-
-FPR <- perf@x.values[[1]]
-TPR <- perf@y.values[[1]]
-
-FPR
-TPR
-
-rocobj$specificities
 
 df <- data.frame(TPR,FPR)
 df
@@ -84,8 +64,14 @@ smrocobj <- smooth(rocobj)
 plot(smrocobj)
 
 
-TPR=smrocobj$sensitivities
-FPR=1-smrocobj$specificities
+#TPR=smrocobj$sensitivities
+#FPR=1-smrocobj$specificities
+
+plot.roc(rocobj, legacy.axes = TRUE)
+plot.roc(rocobj, legacy.axes = FALSE)
+
+TPR=sort(rocobj$sensitivities, decreasing = F)
+FPR=1-sort(rocobj$specificities, decreasing = T)
 
 df <- data.frame(TPR,FPR)
 
@@ -121,3 +107,14 @@ ggplot(df,aes(x=FPR,y=TPR))+geom_line(size = 1, alpha = 1,color='red')+
 #ggplot2::annotate("text", 
 #                  x = 0.6, y = 0.06, # x and y coordinates of the text
 #                  label = paste('p = 1.47e-08'), size = 5)
+
+
+
+#########
+library(ROCR)
+pred <- prediction(dataForThreshold$expr,dataForThreshold$class)
+perf <- performance(pred, measure = "tpr", x.measure = "fpr")
+perf
+
+FPR <- perf@x.values[[1]]
+TPR <- perf@y.values[[1]]
