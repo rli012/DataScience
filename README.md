@@ -5,7 +5,7 @@
 
 ## Machine Learning Project Stucture
 1. Strategy: matching the problem with the solution
-2. Exploratory Data Analhysis (EDA)
+2. Exploratory Data Analysis (EDA)
 3. Data preparation and preprocessing
 4. Feature engineering
 5. Model development
