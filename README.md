@@ -17,6 +17,7 @@
 [In-depth introduction to machine learning in 15 hours of expert](https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/)  
 [An Introduction to Statistical Learning](http://faculty.marshall.usc.edu/gareth-james/ISL/)  
 
+## [AI for Drug Discovery, Biomarker Development and Advanced R&D Landscape Overview 2019 / Q3](https://ai-pharma.dka.global/ai-for-dd-2019-q3/)
 
 ## [158 Startups Using Artificial Intelligence in Drug Discovery](https://blog.benchsci.com/startups-using-artificial-intelligence-in-drug-discovery)
 
