@@ -11,6 +11,10 @@
 5. Model development
 6. Conclusion
 
+## Courses
+[StatQuest with Josh Starmer](https://www.youtube.com/user/joshstarmer/featured)  
+[Hsuan-Tien Lin: Machine Learning Foundations/Techniques](https://www.youtube.com/user/hsuantien)
+
 
 ## [158 Startups Using Artificial Intelligence in Drug Discovery](https://blog.benchsci.com/startups-using-artificial-intelligence-in-drug-discovery)
 
