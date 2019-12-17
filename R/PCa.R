@@ -21,10 +21,32 @@ for (k in 1:nfold) {
 }
 
 LASSO <- data.frame(LASSO, stringsAsFactors = F)
-
 colnames(LASSO) <- c('yobs', 'ypred', 'yprob')
-LASSO$ypred
 
-sum(ifelse(LASSO$ypred>0.5,1,0) == LASSO$yobs)/length(LASSO$yobs)
 
-table(pred=ifelse(LASSO$ypred>0.5,1,0),true=LASSO$yobs)
+## SVM-RBF
+library(kernlab)
+
+SVMRBF <- NULL
+
+for (k in 1:nfold) {
+  message(paste(rep(c('+',k,'+'), each=20), collapse = '')) 
+  i1<-which(foldid!=k)
+  i2<-which(foldid==k)
+  
+  x1<-geno[i1,genes,drop=F]
+  y1<-pheno[i1,,drop=F]
+  
+  x2<-geno[i2,genes,drop=F]
+  y2<-pheno[i2,,drop=F]
+  
+  kern<- ksvm(x=x1,y=y1,type='C-svc',kernel = "rbfdot",kpar = "automatic",cross=0)
+  ypred<-predict(kern,x2,type='response')
+  yprob<-predict(kern,x2,type='decision')
+  
+  SVMRBF <- rbind(SVMRBF, data.frame(yobs=y2, ypred=ypred, yprob))
+  
+}
+
+SVMRBF <- data.frame(SVMRBF, stringsAsFactors = F)
+colnames(SVMRBF) <- c('yobs', 'ypred', 'yprob')
