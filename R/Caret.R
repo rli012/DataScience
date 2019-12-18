@@ -12,7 +12,9 @@ for (k in 1:nfold) {
   x2<-geno[i2,genes,drop=F]
   y2<-pheno[i2,,drop=F]
   
-  # Logistic regression
+  data1 <- data.frame(y1, x1)
+  data1$y1 <- factor(data1$y1)
+  
   trControl <- trainControl(method = "repeatedcv", number = 10, repeats = 5)
   model.fit <- train(y1 ~ ., data = data1, method = "glmnet", trControl = trControl)
   model.fit
