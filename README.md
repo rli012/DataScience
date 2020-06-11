@@ -12,12 +12,13 @@
 6. Conclusion
 
 ## Courses
-[StatQuest with Josh Starmer](https://www.youtube.com/user/joshstarmer/featured)  
-[Hsuan-Tien Lin: Machine Learning Foundations/Techniques](https://www.youtube.com/user/hsuantien)  
-[In-depth introduction to machine learning in 15 hours of expert](https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/)  
-[An Introduction to Statistical Learning](http://faculty.marshall.usc.edu/gareth-james/ISL/)  
-[A Deep Learning Tutorial (Using R)](https://srdas.github.io/DLBook/)  
-[Caret](https://topepo.github.io/caret/index.html)  
+* [StatQuest with Josh Starmer](https://www.youtube.com/user/joshstarmer/featured)  
+* [Hsuan-Tien Lin: Machine Learning Foundations/Techniques](https://www.youtube.com/user/hsuantien)  
+* [In-depth introduction to machine learning in 15 hours of expert](https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/)  
+* [An Introduction to Statistical Learning](http://faculty.marshall.usc.edu/gareth-james/ISL/)  
+* [A Deep Learning Tutorial (Using R)](https://srdas.github.io/DLBook/)  
+* [scikit-learn](https://scikit-learn.org/stable/index.html)
+* [Caret](https://topepo.github.io/caret/index.html)  
 
 ## AI for Drug Discovery, Biomarker Development and Advanced R&D Landscape Overview 2019 / Q3
 [AI for Drug Discovery, Biomarker Development and Advanced R&D Landscape Overview 2019 / Q3](https://ai-pharma.dka.global/ai-for-dd-2019-q3/)  
