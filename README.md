@@ -42,5 +42,3 @@
 ### 14. [Publish data](https://blog.benchsci.com/startups-using-artificial-intelligence-in-drug-discovery#publish_data)
 ### 15. [Analyze real world evidence](https://blog.benchsci.com/startups-using-artificial-intelligence-in-drug-discovery#analyze_real_world_evidence)
 
-
-<ins> text </ins>
